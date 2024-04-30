@@ -7,4 +7,4 @@ class Book(models.Model):
     content=models.TextField()
     price=models.DecimalField(decimal_places=2,max_digits=5)
     def __str__(self):
-        return self.title
+        return f'{self.title} by : {self.author}'
