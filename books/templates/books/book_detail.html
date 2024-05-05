@@ -6,7 +6,8 @@
 {% block content %}
 
     <h1>{{ books.title }}</h1>
-    <h3>{{ books.content }}</h3>
+    <h3>{{ books.content|linebreaks }}</h3>
     <h1>{{ books.price }}</h1>
     <a href="{% url 'book_update' books.id %}"><button type="button" class="btn btn-info"> ویرایش</button></a>
+    <a href="{% url 'book_delete' books.id %}"><button type="button" class="btn btn-danger"> حذف کتاب </button></a>
 {% endblock %}

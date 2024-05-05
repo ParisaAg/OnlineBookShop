@@ -1,0 +1,12 @@
+{% extends '_base.html' %}
+{% block content %}
+    {% block page_title %}
+    پاک کردن
+{% endblock page_title %}
+   <p>are you sure you want delete {{ book.title }} permanently?</p>
+    <form method="POST" action="">
+    {% csrf_token %}
+    <input class="btn btn-danger" type="submit" value="yes delete it">
+    </form>
+{% endblock %}
+
