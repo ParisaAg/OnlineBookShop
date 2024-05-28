@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load static %}
 {% block page_title %}
     جزیات کتاب
 {% endblock page_title %}
@@ -12,8 +13,10 @@
                     <div class="row w-sm-75 w-100">
                         <div class="col-xs-12 col-md-3 d-flex justify-content-center">
                             <div>
-                                <img src="https://cdn.fidibo.com/phoenixpub/content/4084ae80-2b30-49c8-ba71-d17f78802a76/7a73e263-24c8-43a7-add1-f29e44222f70.jpg?width=384"
-                                     class="img-fluid rounded-start" alt="...">
+                                {% if books.covers %}
+                                    <img src="{{ books.cover.url }}"
+                                        class="img-fluid rounded-start" alt="...">
+                                {% endif %}
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6 text-center text-md-end mt-md-1 mt-4">
